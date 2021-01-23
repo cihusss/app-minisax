@@ -191,35 +191,5 @@ body { display: flex; align-items: center; justify-content: space-evenly; flex-d
 }
 
 @media (max-width: 768px) {
-	#minisax .whole {
-	    width: 128px;
-	    height: 128px;
-	    border-radius: 64px;
-	    margin: 24px 8px;
-	}
-
-	#minisax .whole:first-child {
-	    width: 60px;
-	    height: 60px;
-	    border-radius: 30px;
-	    background: black;
-	    margin: 0 0 12px 0;
-	}
-
-	#minisax .half {
-		width: 64px;
-	    height: 128px;
-	    border-top-left-radius: 120px;
-	    border-bottom-left-radius: 120px;
-	    transition: background .1s;
-	    background: none;
-	}
-
-	#minisax .whole:first-child .half {
-		width: 30px;
-	    height: 60px;
-	    /*background-color: #ff4700;*/
-	    border-top-left-radius: 120px;
-	    border-bottom-left-radius: 120px
-	}
+	
 }
