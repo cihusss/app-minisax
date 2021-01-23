@@ -193,7 +193,7 @@ body { display: flex; align-items: center; justify-content: space-evenly; flex-d
 @media (max-width: 768px) {
 
 	#btn-play, #btn-stop {
-		font-size: 160px;
+		font-size: 120px;
 	}
 
 	#tempo-wrap {
@@ -207,12 +207,18 @@ body { display: flex; align-items: center; justify-content: space-evenly; flex-d
 	}
 
 	#display {
-	    font-size: 16px;
-	    padding: 4px;
+	    font-size: 24px;
+	    color: black;
+	    padding: 6px;
 	}
 
 	#input form {
 		margin: 0 0 16px 0;
+	}
+
+	#minisax {
+		margin: 24px 0 0 0;
+		padding: 12px;
 	}
 
 	#minisax .whole {
