@@ -185,6 +185,7 @@ setup = (e) => {
             console.log("Tempo: " + tempo);
             console.log("HREF: " + href);
             generateTune(tunes[selectedTune]);
+            document.querySelector('#tunes-selector [value="' + selectedTune + '"]').selected = true;
             window.history.replaceState(null, null, "?" + "tune=" + selectedTune + "?" + "tempo=" + tempo);
         });
     }
