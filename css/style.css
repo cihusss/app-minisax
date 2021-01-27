@@ -105,6 +105,10 @@ body { display: flex; align-items: center; justify-content: space-evenly; flex-d
 	position: relative;
 }
 
+#input form label {
+	font-size: 14px;
+}
+
 #input form select {
 	margin: 16px;
 	padding: 16px;
@@ -232,6 +236,10 @@ body { display: flex; align-items: center; justify-content: space-evenly; flex-d
 
 	#input form {
 		margin: 0 0 16px 0;
+	}
+
+	#input form label {
+		font-size: 12px;
 	}
 
 	#input form select {
