@@ -219,7 +219,7 @@ body { display: flex; align-items: center; justify-content: space-evenly; flex-d
 	}
 
 	#tempo-wrap {
-		margin: 32px 0 0 0;
+		margin: 24px 0 0 0;
 	}
 
 	.tempo {
@@ -235,7 +235,7 @@ body { display: flex; align-items: center; justify-content: space-evenly; flex-d
 	}
 
 	#input form {
-		margin: 0 0 16px 0;
+		margin: 0 0 8px 0;
 	}
 
 	#input form label {
