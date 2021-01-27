@@ -42,7 +42,9 @@ if (window.location.href.includes("?")) {
 }
 else {
     console.log("no string");
-    href = "?tune=scale?tempo=1";
+    // href = "?tune=scale?tempo=1";
+    window.history.replaceState(null, null, "?" + "?tune=scale?tempo=1");
+    href = window.location.href.split("=")[1].split("?")[0];
 };
 
 let boo = tempo - 1;
