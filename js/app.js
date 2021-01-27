@@ -37,17 +37,34 @@ const fingering = {
 }
 
 const tunes = {
+    scale: ["C4:.5","D4:.5","E4:.5","F4:.5","G4:.5","A4:.5","B4:.5","C5:.5","PP:.5","C5:.5","B4:.5","A4:.5","G4:.5","F4:.5","E4:.5","D4:.5","C4:.5"],
     hpbd: ["C4:.5","C4:.25","D4:.75","C4:.75","F4:.75","E4:1","PP:1","C4:.5","C4:.25","D4:.75","C4:.75","G4:.75","F4:1"],
     pink: ["D4s:.25","E4:.5","PP:.5", "F4s:.25","G4:.5"] 
 }
 
 // const hpbd = ["C4:0.5","C4:0.25","D4:0.75","C4:0.75","F4:0.75","E4:1","PP:1","C4:0.5","C4:0.25","D4:0.75","C4:0.75","G4:0.75","F4:1"];
 
+let href = "";
+let tempo = 1;
+
+if (window.location.href.includes("?")) {
+    console.log("has string");
+    href = window.location.href.split("=")[1].split("?")[0];
+    tempo = window.location.href.split("=")[2];
+    console.log(tempo);
+}
+else {
+    console.log("no string");
+    href = "?tune=pink?tempo=1";
+}
+
+let boo = tempo - 1;
+console.log("boo=" + boo);
+
 let tracker = [];
 let tune = [];
 let start = 0;
 let end;
-let tempo = 1;
 let stop = 0;
 let holes = document.getElementsByClassName("hole");
 let display = document.getElementById("display");
@@ -142,25 +159,13 @@ stopTune = (e) => {
 
 changeTempo = (e) => {
     tempo = this.getAttribute("data-tempo");
-    console.log(tempo);
+    // console.log(tempo);
 };
 
 document.getElementById("btn-play").addEventListener("click", playTune);
 document.getElementById("btn-stop").addEventListener("click", stopTune);
 
 let tempoButtons = document.getElementsByClassName("tempo");
-
-// for (let i = 0; i < tempoButtons.length; i++) {
-//     ele = document.getElementsByClassName("tempo")[i].addEventListener("click", function() {
-//         tempo = this.getAttribute("data-tempo");
-//         for (let i = 0; i < tempoButtons.length; i++) {
-//             document.getElementsByClassName("tempo")[i].classList.remove('active');
-//         }
-//         this.classList.add('active');
-//         console.log("Tempo: " + tempo);
-//         generateTune(tunes.hpbd);
-//     });
-// }
 
 function eventFire(el, etype){
     if (el.fireEvent) {
@@ -174,28 +179,27 @@ function eventFire(el, etype){
 
 const selectTune = () => {
     selectedTune = document.getElementById("tunes-selector").value;
-    // console.log(selectedTune);
     generateTune(tunes[selectedTune]);
+    window.history.replaceState(null, null, "?" + "tune=" + selectedTune + "?" + "tempo=" + tempo);
 }
 
 document.getElementById("tunes-selector").addEventListener("change", selectTune);
 
 setup = (e) => {
+
     for (let i = 0; i < tempoButtons.length; i++) {
         ele = document.getElementsByClassName("tempo")[i].addEventListener("click", function() {
-            tempo = this.getAttribute("data-tempo");
             for (let i = 0; i < tempoButtons.length; i++) {
                 document.getElementsByClassName("tempo")[i].classList.remove('active');
             }
             this.classList.add('active');
+            tempo = this.getAttribute("data-tempo");
             console.log("Tempo: " + tempo);
             generateTune(tunes[selectedTune]);
+            window.history.replaceState(null, null, "?" + "tune=" + selectedTune + "?" + "tempo=" + tempo);
         });
     }
 };
 
 setup();
-eventFire(document.getElementById("default-tempo"), "click");
-
-// generateTune(hpbd);
-// console.log(tune);
+eventFire(document.getElementsByClassName("tempo")[boo], "click");
