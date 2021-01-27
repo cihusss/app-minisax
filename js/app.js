@@ -37,11 +37,12 @@ if (window.location.href.includes("?")) {
     console.log("has string");
     href = window.location.href.split("=")[1].split("?")[0];
     tempo = window.location.href.split("=")[2];
+    console.log(href);
     console.log(tempo);
 }
 else {
     console.log("no string");
-    href = "?tune=pink?tempo=1";
+    href = "?tune=scale?tempo=1";
 };
 
 let boo = tempo - 1;
@@ -54,7 +55,8 @@ let end;
 let stop = 0;
 let holes = document.getElementsByClassName("hole");
 let display = document.getElementById("display");
-let selectedTune = document.getElementById("tunes-selector").value;
+// let selectedTune = document.getElementById("tunes-selector").value;
+let selectedTune = href
 console.log(selectedTune);
 
 const generateTune = (t) => {
@@ -181,6 +183,7 @@ setup = (e) => {
             this.classList.add('active');
             tempo = this.getAttribute("data-tempo");
             console.log("Tempo: " + tempo);
+            console.log("HREF: " + href);
             generateTune(tunes[selectedTune]);
             window.history.replaceState(null, null, "?" + "tune=" + selectedTune + "?" + "tempo=" + tempo);
         });
