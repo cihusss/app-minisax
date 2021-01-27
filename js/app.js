@@ -4,7 +4,7 @@ const compressor = audio.createDynamicsCompressor();
 compressor.connect(audio.destination);
 
 //const freq = {C4: 261.626,C4s: 277.18, D4: 293.66, D4s: 311.13, E4: 329.63, F4: 349.23, F4s: 369.99, G4: 392.00, Gs: 415.30, A4: 440.00, A4s: 466.16, B4: 493.88, C5: 523.25, PP: 1};
-const freq = {C4: 233.08,C4s: 246.94, D4: 261.63, D4s: 277.18, E4: 293.66, F4: 311.13, F4s: 329.63, G4: 349.23, Gs: 369.99, A4: 392.00, A4s: 415.30, B4: 440.00, C5: 466.16, PP: 1};
+const freq = {MM:700, C4:233.08, C4s:246.94, D4:261.63, D4s:277.18, E4:293.66, F4:311.13, F4s:329.63, G4:349.23, Gs:369.99, A4:392.00, A4s:415.30, B4:440.00, C5:466.16, PP:1};
 
 const fingering = {
     C4: {hole1: 1, hole2: 1, hole3: 1, hole4: 1, hole5: 1, hole6: 1, hole7: 1},
@@ -24,7 +24,7 @@ const fingering = {
 
 const tunes = {
     scale: ["C4:.5","D4:.5","E4:.5","F4:.5","G4:.5","A4:.5","B4:.5","C5:.5","PP:.5","C5:.5","B4:.5","A4:.5","G4:.5","F4:.5","E4:.5","D4:.5","C4:.5"],
-    hpbd: ["C4:.5","C4:.25","D4:.75","C4:.75","F4:.75","E4:1","PP:1","C4:.5","C4:.25","D4:.75","C4:.75","G4:.75","F4:1"],
+    hpbd: ["MM:.25", "PP:0.25", "MM:.25", "PP:0.25", "MM:.25", "PP:0.5", "C4:.5","C4:.25","D4:.75","C4:.75","F4:.75","E4:1","PP:1","C4:.5","C4:.25","D4:.75","C4:.75","G4:.75","F4:1"],
     pink: ["D4s:.25","E4:.5","PP:.5", "F4s:.25","G4:.5"] 
 };
 
@@ -91,7 +91,7 @@ playTune = (e) => {
     for (let note = 0; note < tune.length; note++) {
 
 
-        if (tune[note][0] == "PP") {
+        if (tune[note][0] == "PP" || tune[note][0] == "MM") {
             // dont press key
         }
         else {
