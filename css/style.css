@@ -18,6 +18,11 @@ body { display: flex; align-items: center; justify-content: space-evenly; flex-d
 	background: #f7f7f7;
 }
 
+#logo img {
+	width: 80px;
+	margin-bottom: -32px;
+}
+
 #minisax {
     display: flex;
     flex-direction: column;
@@ -213,6 +218,11 @@ body { display: flex; align-items: center; justify-content: space-evenly; flex-d
 }
 
 @media (max-width: 768px) {
+
+	#logo img {
+		width: 60px;
+		margin-bottom: -12px;
+	}
 
 	#btn-play, #btn-stop {
 		font-size: 120px;
