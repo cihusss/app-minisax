@@ -3,7 +3,7 @@ const audio = new AudioContext();
 const compressor = audio.createDynamicsCompressor();
 compressor.connect(audio.destination);
 
-// const freq = {C4: 261.626,C4s: 277.18, D4: 293.66, D4s: 311.13, E4: 329.63, F4: 349.23, F4s: 369.99, G4: 392.00, Gs: 415.30, A4: 440.00, A4s: 466.16, B4: 493.88, C5: 523.25, PP: 1};
+// const freq = {MM:160, C4: 261.626,C4s: 277.18, D4: 293.66, D4s: 311.13, E4: 329.63, F4: 349.23, F4s: 369.99, G4: 392.00, Gs: 415.30, A4: 440.00, A4s: 466.16, B4: 493.88, C5: 523.25, PP: 1};
 const freq = {MM:160, C4:233.08, C4s:246.94, D4:261.63, D4s:277.18, E4:293.66, F4:311.13, F4s:329.63, G4:349.23, Gs:369.99, A4:392.00, A4s:415.30, B4:440.00, C5:466.16, PP:1};
 
 const fingering = {
@@ -130,7 +130,7 @@ playTune = (e) => {
             setTimeout(function(){display.innerHTML = tune[note][0]}, tune[note][2] * 1000);
             setTimeout(function(){display.innerHTML = "&bull;"}, tune[note][3] * 1000 - 1);
         };
-        (new SoundPlayer(audio, compressor)).play(tune[note][1], 1, "sine", tune[note][2]).stop(tune[note][3]);
+        (new SoundPlayer(audio, compressor)).play(tune[note][1], 2, "triangle", tune[note][2]).stop(tune[note][3]);
         tracker.push(audio);
     };
 
