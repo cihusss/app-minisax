@@ -217,6 +217,14 @@ body { display: flex; align-items: center; justify-content: space-evenly; flex-d
 	cursor: pointer;
 }
 
+#ver {
+	font-size: 8px;
+	color: #999;
+	position: absolute;
+	bottom: 12px;
+	right: 12px;
+}
+
 @media (max-width: 768px) {
 
 	#logo img {
