@@ -244,7 +244,7 @@ body { display: flex; align-items: center; background: #fff; justify-content: sp
 	right: 12px;
 }
 
-@media (max-width: 768px), (max-height: 680px) {
+@media (max-width: 768px) {
 
 	#logo img {
 		width: 60px;
@@ -330,80 +330,5 @@ body { display: flex; align-items: center; background: #fff; justify-content: sp
 	    /*background-color: #ff4700;*/
 	    border-top-left-radius: 120px;
 	    border-bottom-left-radius: 120px
-	}
-}
-
-
-
-@media (max-height: 500px) {
-
-	#logo img {
-		width: 48px;
-		margin-bottom: -8px;
-	}
-
-	#minisax .whole {
-	    width: 24px;
-	    height: 24px;
-	    border-radius: 12px;
-	    margin: 6px 3px;
-	    transition: background .1s;
-	    background: black;
-	}
-
-	#minisax .whole:first-child {
-	    width: 12px;
-	    height: 12px;
-	    border-radius: 6px;
-	    background: black;
-	    margin: 0 0 4px 0;
-	}
-
-	#minisax .half {
-		width: 12px;
-	    height: 24px;
-	    border-top-left-radius: 120px;
-	    border-bottom-left-radius: 120px;
-	    transition: background .1s;
-	    background: none;
-	}
-
-	#minisax .whole:first-child .half {
-		width: 5px;
-	    height: 10px;
-	    /*background-color: #ff4700;*/
-	    border-top-left-radius: 120px;
-	}
-
-	#display {
-    	font-size: 18px;
-    	padding: 6px;
-	}
-
-	#minisax {
-		margin: 16px 0 0 0;
-		padding: 8px;
-	}
-
-	#tempo-wrap {
-		margin: 10px 0 0 0;
-	}
-
-	.tempo {
-	    font-size: 12px;
-	    margin: 6px;
-	    padding: 6px 4px;
-	    min-width: 92px;
-	}
-
-	#input form select {
-		font-size: 12px;
-		min-width: 130px;
-		margin: 8px;
-		padding: 6px;
-	}
-
-	#btn-play, #btn-stop {
-		font-size: 92px;
 	}
 }
