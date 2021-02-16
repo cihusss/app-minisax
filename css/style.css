@@ -262,11 +262,10 @@ body { display: flex; align-items: center; background: #fff; justify-content: sp
 	font-size: 10px;
 	color: #fff;
 	background: #6a6a6a;
-	border-radius: 6px 6px 0 0;
+	border-radius: 0 6px 0 0;
 	position: absolute;
 	bottom: 0;
-	left: auto;
-	right: auto;
+	left: 0;
 	display: block;
 	text-decoration: none;
 	padding: 8px 12px 6px 12px;
