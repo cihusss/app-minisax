@@ -240,8 +240,8 @@ body { display: flex; align-items: center; background: #fff; justify-content: sp
 	font-size: 9px;
 	color: #999;
 	position: absolute;
-	bottom: 12px;
-	right: 12px;
+	bottom: 8px;
+	right: 8px;
 }
 
 #ver a, #ver a:visited {
@@ -261,7 +261,7 @@ body { display: flex; align-items: center; background: #fff; justify-content: sp
 #feedback {
 	font-size: 10px;
 	color: #fff;
-	background: #3c3c3c;
+	background: #6a6a6a;
 	border-radius: 6px 6px 0 0;
 	position: absolute;
 	bottom: 0;
