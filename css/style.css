@@ -237,11 +237,49 @@ body { display: flex; align-items: center; background: #fff; justify-content: sp
 }
 
 #ver {
-	font-size: 8px;
+	font-size: 9px;
 	color: #999;
 	position: absolute;
 	bottom: 12px;
 	right: 12px;
+}
+
+#ver a, #ver a:visited {
+	text-decoration: underline;
+	color: #666;
+}
+
+#ver a:hover {
+	color: #222;
+}
+
+#ver span {
+	margin-bottom: 4px 0;
+	vertical-align: middle;
+}
+
+#feedback {
+	font-size: 10px;
+	color: #fff;
+	background: #3c3c3c;
+	border-radius: 20px;
+	position: absolute;
+	bottom: 12px;
+	left: 12px;
+	display: block;
+	text-decoration: none;
+	padding: 8px 12px;
+}
+
+#feeback:hover {
+	background-color: #ff4700;
+}
+
+#feedback i {
+    font-size: 13px;
+    display: inline-block;
+    vertical-align: bottom;
+    margin: 0 -2px 0 4px;
 }
 
 @media (max-width: 768px), (max-height: 680px) {
