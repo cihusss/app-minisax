@@ -262,13 +262,14 @@ body { display: flex; align-items: center; background: #fff; justify-content: sp
 	font-size: 10px;
 	color: #fff;
 	background: #3c3c3c;
-	border-radius: 20px;
+	border-radius: 6px 6px 0 0;
 	position: absolute;
-	bottom: 12px;
-	left: 12px;
+	bottom: 0;
+	left: auto;
+	right: auto;
 	display: block;
 	text-decoration: none;
-	padding: 8px 12px;
+	padding: 8px 12px 6px 12px;
 }
 
 #feeback:hover {
